@@ -8,5 +8,8 @@ server.get('/', function (req, res, cb) {
 });
 
 server.listen(process.env.PORT || 5000, function () { // bind server to port 5000.
-  console.log('%s listening at %s', server.name, server.url);
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log('Web server started at http://%s:%s', host, port);
 });
