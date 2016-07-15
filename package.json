@@ -21,6 +21,11 @@
     "npm": "3.9.5"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "botbuilder": "^3.0.1",
+    "botconnector": "^0.9.6",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.4",
+    "ms-rest": "^1.14.4",
+    "restify": "^4.1.1"
   }
 }
