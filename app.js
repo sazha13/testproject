@@ -3,7 +3,7 @@ var express = require('express'), // require the restify library.
 
 // add a route that listens on http://localhost:5000/hello/world
 app.get('/', function (req, res, cb) {
-  res.send("Hello World!");
+  res.json({text : "Hello World!"});
   return cb();
 });
 
