@@ -1,7 +1,12 @@
-var http = require("http");
-console.log("hello world123");
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello World");
-  response.end();
-}).listen(80);
+var restify = require('restify'), // require the restify library.
+  server = restify.createServer(); // create an HTTP server.
+
+// add a route that listens on http://localhost:5000/hello/world
+server.get('/hello', function (req, res, cb) {
+  res.send("Hello World!");
+  return cb();
+});
+
+server.listen(process.env.PORT || 5000, function () { // bind server to port 5000.
+  console.log('%s listening at %s', server.name, server.url);
+});
