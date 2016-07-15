@@ -1,8 +1,8 @@
-var restify = require('restify'), // require the restify library.
-  server = restify.createServer(); // create an HTTP server.
+var express = require('express'), // require the restify library.
+  server = express(); // create an HTTP server.
 
 // add a route that listens on http://localhost:5000/hello/world
-server.get('/hello', function (req, res, cb) {
+server.get('/', function (req, res, cb) {
   res.send("Hello World!");
   return cb();
 });
